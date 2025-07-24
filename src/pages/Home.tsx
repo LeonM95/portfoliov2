@@ -1,24 +1,23 @@
-import StarBackground from "../components/StarBackground";
-import { ThemeToggle } from "../components/ThemeToggle";
+import Background from "../components/Background";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import About from "../components/About";
-import { Skills } from "../components/Skills";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* The toggle */}
-      <ThemeToggle />
-      {/* backgroud effects */}
-      <StarBackground />
-      {/* navbar */}
+      <Background />
       <Navbar />
       {/* main content */}
       <main>
         <Hero />
         <About />
         <Skills />
+        <Projects />
+        <Contact />
       </main>
     </div>
   );

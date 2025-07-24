@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skill" },
-  { name: "Projects", href: "#proyect" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -16,7 +16,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,7 +27,9 @@ export default function Navbar() {
     <nav
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
-        isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
+        isScrolled
+          ? "py-1 bg-black bg-opacity-80 backdrop-blur-md shadow-md"
+          : "py-1 bg-transparent"
       )}
     >
       <div className="container flex items-center justify-between">
@@ -35,9 +37,8 @@ export default function Navbar() {
           href="#hero"
           className="text-xl font-bold text-primary flex items-center"
         >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground">Leo M</span> Portafolio
-          </span>
+          <img src="/PortafolioLogo.png" alt="LM Logo" className="w-16 h-16" />
+          <span className="text-glow text-foreground">Portafolio</span>
         </a>
 
         {/* full screen */}

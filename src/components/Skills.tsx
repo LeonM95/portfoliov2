@@ -69,7 +69,7 @@ const skills = [
   },
 ];
 
-export const Skills = () => {
+export default function Skills() {
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -81,7 +81,7 @@ export const Skills = () => {
           {skills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card bg-opacity-7 p-6 rounded-lg shadow-xs card-hover flex flex-col items-start space-y-2"
+              className="bg-card bg-opacity-7 p-6 rounded-lg shadow-xs card-hover flex flex-col items-start space-y-2 cursor-pointer"
             >
               <div className="text-3xl text-primary">{skill.icon}</div>
               <h3 className="font-semibold text-lg">{skill.name}</h3>
@@ -92,4 +92,4 @@ export const Skills = () => {
       </div>
     </section>
   );
-};
+}

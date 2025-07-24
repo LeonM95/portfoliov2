@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-export default function StarBackground() {
+export default function Background() {
   const [stars, setStars] = useState<Star[]>([]);
   const [meteors, setMeteors] = useState<Meteor[]>([]);
 
-  // TS type
+  // TS types
   type Star = {
     id: number;
     size: number;
@@ -37,7 +37,7 @@ export default function StarBackground() {
   }, []);
 
   const generateMeteors = () => {
-    const numberOfMeteors = 4;
+    const numberOfMeteors = 5;
 
     const newMeteors = [];
 
