@@ -22,8 +22,11 @@ export default function Hero() {
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-            <a href="#projects" className="cosmic-button">
-              Contact Me
+            <a
+              href="#contact"
+              className="cosmic-button inline-block hover:scale-105 transition-transform duration-300"
+            >
+              Contact me
             </a>
           </div>
         </div>

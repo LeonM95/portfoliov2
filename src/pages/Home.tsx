@@ -5,6 +5,7 @@ import About from "../components/About";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import MeteorCursor from "../components/MeteorCursor";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
       <Navbar />
       {/* main content */}
       <main>
+        <MeteorCursor />
         <Hero />
         <About />
         <Skills />

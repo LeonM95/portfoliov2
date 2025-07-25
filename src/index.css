@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -63,19 +64,6 @@
 }
 
 @layer base {
-  /* :root {
-    --background: 210 40% 98%;
-    --background: 0 0% 7%;
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-  } */
-
   :root {
     --background: 222 15% 2%;
     --foreground: 213 31% 91%;
@@ -94,11 +82,14 @@
 
   html {
     @apply scroll-smooth;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
   }
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+    cursor: none; /* Hide default cursor */
   }
 }
 
