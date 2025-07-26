@@ -22,9 +22,9 @@ export default function Contact() {
                 <MailIcon className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Email</h4>
+                <h4 className="font-medium flex items-start">Email</h4>
                 <span className="text-muted-foreground">
-                  leomasis95@gmail.com
+                  Leomasis95@gmail.com
                 </span>
               </div>
             </div>
@@ -34,7 +34,7 @@ export default function Contact() {
                 <PhoneIcon className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Phone</h4>
+                <h4 className="font-medium flex items-start">Phone</h4>
                 <span className="text-muted-foreground">+506 6448 3985</span>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Contact() {
                 <MapPin className="h-5 w-5 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Location</h4>
+                <h4 className="font-medium flex items-start">Location</h4>
                 <span className="text-muted-foreground">
                   Cartago, Costa Rica
                 </span>

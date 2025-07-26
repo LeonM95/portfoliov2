@@ -22,8 +22,8 @@ export default function About() {
             for SaaS platforms. For several years, I helped users solve complex
             problems, handled high-pressure situations, and learned how software
             impacts people in real-time. That experience shaped the way I think
-            about building tools — focusing on clarity, performance, and the
-            user’s perspective.
+            about developing solutions — focusing on clarity, performance, and
+            the user’s perspective.
           </p>
 
           <p className="text-muted-foreground">

@@ -1,71 +1,6 @@
 import { Github, Globe } from "lucide-react";
 import ProjectCarousel from "./ProjectCarousel";
-
-type projects = {
-  id: number;
-  title: string;
-  description: string;
-  image?: string;
-  images?: string[];
-  tag: string[];
-  demoURL: string;
-  githubURL: string;
-};
-
-const projects = [
-  {
-    id: 1,
-    title: "Ecommerce Gym Up",
-    description:
-      "Gym Up is an Ecommerce to seel products for athletes of any sport",
-    images: [
-      "/projects/GymCore/GymCore1.png",
-      "/projects/GymCore/GymCore2.png",
-      "/projects/GymCore/GymCore3.png",
-      "/projects/GymCore/GymCore4.png",
-      "/projects/GymCore/GymCore5.png",
-      "/projects/GymCore/GymCore6.png",
-      "/projects/GymCore/GymCore7.png",
-    ],
-    tag: ["React, Next.js, Tailwind CSS"],
-    demoURL: "#",
-    githubURL: "#",
-  },
-  {
-    id: 2,
-    title: "Portfolio",
-    description: "This is a portfolio to show my abilities",
-    images: [
-      "/projects/GymCore/GymCore1.png",
-      "/projects/GymCore/GymCore2.png",
-      "/projects/GymCore/GymCore3.png",
-      "/projects/GymCore/GymCore4.png",
-      "/projects/GymCore/GymCore5.png",
-      "/projects/GymCore/GymCore6.png",
-      "/projects/GymCore/GymCore7.png",
-    ],
-    tag: ["React, Vite, Tailwind CSS"],
-    demoURL: "#",
-    githubURL: "#",
-  },
-  {
-    id: 3,
-    title: "AI landing page",
-    description: "This is a landing page for AI bots",
-    images: [
-      "/projects/GymCore/GymCore1.png",
-      "/projects/GymCore/GymCore2.png",
-      "/projects/GymCore/GymCore3.png",
-      "/projects/GymCore/GymCore4.png",
-      "/projects/GymCore/GymCore5.png",
-      "/projects/GymCore/GymCore6.png",
-      "/projects/GymCore/GymCore7.png",
-    ],
-    tag: ["React, Next.js, Tailwind CSS"],
-    demoURL: "#",
-    githubURL: "#",
-  },
-];
+import { projects } from "../lib/projectsData";
 
 export default function Projects() {
   return (
@@ -87,23 +22,22 @@ export default function Projects() {
               className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
             >
               <ProjectCarousel images={project.images ?? []} />
-              {/* <div className="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div> */}
-              <div className="p-6 ">
+
+              <div className="p-6 h-52">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <h3 className="text-xl font-semibold mb-1">
-                    {project.title}
-                  </h3>
-                  {project.tag.map((tag) => (
-                    // <span className="px-2 py-1 text-sm font-medium rounded-full bg-secondary text-secondary">
-                    <div>{tag}</div>
-                    // </span>
-                  ))}
+                  <div className="w-full text-center">
+                    <h2 className="text-primary text-center text-xl font-semibold mb-1">
+                      {project.title}
+                    </h2>
+                  </div>
+                  <div>
+                    <div className="flex flex-row flex-wrap gap-2.5">
+                      {project.tag.map((tag, key) => (
+                        <div key={key}>{tag}</div>
+                      ))}
+                    </div>
+                  </div>
+
                   <p className="text-muted-foreground text-sm">
                     {project.description}
                   </p>
